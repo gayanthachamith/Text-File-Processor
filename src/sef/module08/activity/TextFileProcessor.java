@@ -28,13 +28,15 @@ public class TextFileProcessor {
 //read line by line
 
             while ((line = reader.readLine()) != null) {
-                line = line.trim(); // removing whitespace
-                String processedLine = line.toUpperCase(); // convert to uppercase
+                if(!line.isBlank()) {
+                    line = line.trim(); // removing whitespace
+                    String processedLine = line.toUpperCase(); // convert to uppercase
 
-                writer.write(processedLine); //write to output file
-                writer.newLine();
+                    writer.write(processedLine); //write to output file
+                    writer.newLine();
 
-                lineCount++;
+                    lineCount++;
+                }
             }
 
             System.out.println("Processing completed.");
