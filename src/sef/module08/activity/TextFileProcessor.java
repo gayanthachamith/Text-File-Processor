@@ -13,6 +13,7 @@ public class TextFileProcessor {
         String inputFile = "data/input.txt";
         String outputFile = "data/output.txt";
 
+        //reader  writer objects
         TextFileReader readerUtil = new TextFileReader();
         TextFileWriter writerUtil = new TextFileWriter();
 
@@ -24,12 +25,13 @@ public class TextFileProcessor {
         ) {
 
             String line;
+//read line by line
 
             while ((line = reader.readLine()) != null) {
-                line = line.trim();
-                String processedLine = line.toUpperCase();
+                line = line.trim(); // removing whitespace
+                String processedLine = line.toUpperCase(); // convert to uppercase
 
-                writer.write(processedLine);
+                writer.write(processedLine); //write to output file
                 writer.newLine();
 
                 lineCount++;
