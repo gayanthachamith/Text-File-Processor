@@ -38,8 +38,8 @@ public class TextFileProcessor {
             System.out.println("Processing completed.");
             System.out.println("Number of lines processed: " + lineCount);
 
-        } catch (IOException e) {
-            System.out.println("Error: " + e.getMessage());
+        } catch (IOException exception) {
+            System.out.println("Error: " + exception.getMessage());
         }
     }
 }
