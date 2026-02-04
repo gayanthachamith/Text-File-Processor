@@ -11,11 +11,12 @@ public class TextFileProcessor {
     public static void main(String[] args) {
 
         String inputFile = "data/input.txt";
-        String outputFile = "data/output.txt";
+        String outputFile = "data/Team2.txt";
 
         //reader  writer objects
         TextFileReader readerUtil = new TextFileReader();
         TextFileWriter writerUtil = new TextFileWriter();
+
 
         int lineCount = 0;
 
@@ -28,7 +29,7 @@ public class TextFileProcessor {
 //read line by line
 
             while ((line = reader.readLine()) != null) {
-                if(!line.isBlank()) {
+                if(!line.isBlank()) { //ignoring empty lines
                     line = line.trim(); // removing whitespace
                     String processedLine = line.toUpperCase(); // convert to uppercase
 
