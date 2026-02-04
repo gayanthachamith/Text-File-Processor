@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class TextFileReader {
 
-    public BufferedReader getBufferedReader(String filePath) throws IOException {
+    public BufferedReader getReader(String filePath) throws IOException {
         return new BufferedReader(new FileReader(filePath));
     }
 }

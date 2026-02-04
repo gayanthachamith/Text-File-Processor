@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class TextFileWriter {
 
-    public BufferedWriter getBufferedWriter(String filePath) throws IOException {
+    public BufferedWriter getWriter(String filePath) throws IOException {
         return new BufferedWriter(new FileWriter(filePath));
     }
 }
