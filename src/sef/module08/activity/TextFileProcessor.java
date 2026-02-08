@@ -8,7 +8,45 @@ import java.io.IOException;
 
 public class TextFileProcessor {
 
-    public static void main(String[] args) {
+        private final TextFileReader readerUtil = new TextFileReader();
+        private final TextFileWriter writerUtil = new TextFileWriter();
+
+        /**
+         * Processes the input file and writes results to the output file.
+         * Rules:
+         * - Ignore empty/blank lines
+         * - Trim whitespace (start/end)
+         * - Convert to uppercase
+         * Returns number of processed (written) lines.
+         */
+        public int process(String inputFile, String outputFile) throws IOException {
+            int lineCount = 0;
+
+            try (
+                    BufferedReader reader = readerUtil.getReader(inputFile);
+                    BufferedWriter writer = writerUtil.getWriter(outputFile)
+            ) {
+                String line;
+
+                while ((line = reader.readLine()) != null) {
+                    if (line.isBlank()) {
+                        continue; // ignore empty lines
+                    }
+
+                    line = line.trim();
+                    String processedLine = line.toUpperCase();
+
+                    writer.write(processedLine);
+                    writer.newLine();
+
+                    lineCount++; // count only written lines
+                }
+            }
+
+            return lineCount;
+        }
+
+        public static void main(String[] args) {
 
         String inputFile = "data/input.txt";
         String outputFile = "data/Team2.txt";
