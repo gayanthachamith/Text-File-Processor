@@ -11,14 +11,7 @@ public class TextFileProcessor {
         private final TextFileReader readerUtil = new TextFileReader();
         private final TextFileWriter writerUtil = new TextFileWriter();
 
-        /**
-         * Processes the input file and writes results to the output file.
-         * Rules:
-         * - Ignore empty/blank lines
-         * - Trim whitespace (start/end)
-         * - Convert to uppercase
-         * Returns number of processed (written) lines.
-         */
+        
         public int process(String inputFile, String outputFile) throws IOException {
             int lineCount = 0;
 
