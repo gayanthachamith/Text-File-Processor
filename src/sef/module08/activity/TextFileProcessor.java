@@ -11,7 +11,7 @@ public class TextFileProcessor {
         private final TextFileReader readerUtil = new TextFileReader();
         private final TextFileWriter writerUtil = new TextFileWriter();
 
-        
+
         public int process(String inputFile, String outputFile) throws IOException {
             int lineCount = 0;
 
