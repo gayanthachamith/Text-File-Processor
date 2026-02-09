@@ -1,4 +1,4 @@
-package sef.module08.activity;
+package module08.activity;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

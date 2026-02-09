@@ -1,8 +1,8 @@
-package test.java.sef.module08.activity;
+package java.sef.module08.activity;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
-import sef.module08.activity.TextFileProcessor;
+import module08.activity.TextFileProcessor;
 
 import java.io.IOException;
 import java.nio.file.Files;
